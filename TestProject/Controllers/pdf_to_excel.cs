@@ -14,6 +14,10 @@ namespace TestProject.Controllers
     public class pdf_to_excel : ControllerBase
     {
         private readonly string AppDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+        [HttpGet]
+        public string test(){
+        return "vivek";
+        }
         [HttpPost]
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> convert_pdf_to_excel([FromForm] FileModel model)
